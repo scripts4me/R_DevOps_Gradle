@@ -9,14 +9,18 @@ import com.indvd00m.ascii.render.api.IContextBuilder;
 import com.indvd00m.ascii.render.api.IRender;
 import com.indvd00m.ascii.render.elements.PseudoText;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class App {
-    public String getGreeting() {
+    
+    public String getGreeting() {        
         return "Hello World!";
     }
 
     public static void main(String[] args) {
+        String str = "Das ist ein String!";
+        
         System.out.println(new App().getGreeting());
-
 
         //Ascii render example
         IRender render = new Render();
@@ -26,5 +30,15 @@ public class App {
         ICanvas canvas = render.render(builder.build());
         String s = canvas.getText();
         System.out.println(s);
+
+
+        //StringUtils example
+        if (StringUtils.isEmpty(str)) {
+            System.out.println("String is empty.");
+        } else {
+            System.out.println("String is not empty.");
+        }
     }
+    
+
 }

@@ -25,6 +25,10 @@ dependencies {
 
     // Dependency added by peteral2
     implementation 'com.indvd00m.ascii.render:ascii-render:2.2.0'
+
+    // Dependency2 added by peteral2
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+
 }
 
 application {
